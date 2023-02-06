@@ -35,7 +35,7 @@ def postreq(key, value):
 
     #req = requests.Request('POST','http://challenge01.root-me.org/programmation/ch8/',headers=headers, json={key : value})
     req = requests.get('http://challenge01.root-me.org/programmation/ch8/',headers=headers, params=payload)
-    print(req.text)
+    print(req.text)y
     #prepared = req.prepare()
     #pretty_print_POST(req)
 
@@ -55,15 +55,7 @@ def stringTopng(string):
     return img
 
 def pretty_print_POST(req):
-    """
-    At this point it is completely built and ready
-    to be fired; it is "prepared".
-
-    However pay attention at the formatting used in 
-    this function because it is programmed to be pretty 
-    printed and may differ from the actual request.
-    """
-    print('{}\n{}\r\n{}\r\n\r\n{}'.format(
+      print('{}\n{}\r\n{}\r\n\r\n{}'.format(
         '-----------START-----------',
         req.method + ' ' + req.url,
         '\r\n'.join('{}: {}'.format(k, v) for k, v in req.headers.items()),
